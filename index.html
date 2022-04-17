@@ -12,16 +12,24 @@
     .VCC_before {
         visibility: hidden;
     }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 </style>
 
-<body>
-    <div class='VCC'>
-        <div> 页面UV:<span class='VCC_uv'>正在获取</span> </div>
-        <div> 页面PV:<span class='VCC_pv VCC_before'></span> </div>
-        <div class='VCC_before'> 页面点赞数:<span class='VCC_like'></span> </div>
-    </div>
-    <div class='VCC VCC_before VCC_uv_sum'></div>
-    <div class='VCC VCC_before VCC_pv_sum' vcc_showin='/'></div>
-    <div class='VCC VCC_before VCC_like_sum' vcc_hidein='/'></div>
+<body class='VCC'>
+    <div> 访客量UV：<span class='VCC_uv'>正在获取</span> </div>
+    <div> 浏览量PV：<span class='VCC_pv'>正在获取</span> </div>
+    <div> 点赞量：<span class='VCC_like'>正在获取</span> </div>
+    <br>
+    <button class="VCC VCC_before VCC_giveLike">点赞！</button>
+    <br>
+    <span>Made by <a href="https://github.com/LeUKi">lafish</a> with <a href="https://github.com/LeUKi/viewer-catch">viewer-catch</a>.</span>
 </body>
+
 </html>
